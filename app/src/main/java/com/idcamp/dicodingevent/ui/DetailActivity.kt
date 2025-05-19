@@ -40,13 +40,15 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun setDetailData(event: EventDetailItem) {
+        val remainingQuota = event.quota?.minus(event.registrants!!)
+
         Glide.with(this)
             .load(event.mediaCover)
             .into(binding.ivMediaCover)
         binding.tvName.text = event.name
         binding.tvOwner.text = event.ownerName
         binding.tvBeginTime.text = event.beginTime
-        binding.tvQuota.text = event.quota.toString()
+        binding.tvQuota.text = remainingQuota.toString()
         binding.tvDescription.text = HtmlCompat.fromHtml(
             event.description.toString(),
             HtmlCompat.FROM_HTML_MODE_LEGACY
