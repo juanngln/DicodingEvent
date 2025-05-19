@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Dicoding Event</string>
+
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- Home -->
+    <string name="upcoming">Upcoming Events</string>
+    <string name="finished">Finished Events</string>
+
+    <!-- Upcoming Event -->
+    <string name="subtitle_upcoming">Recommendation event for you!</string>
+
+    <!-- Finished Event -->
+    <string name="subtitle_finished">Finished Event</string>
+
+    <!-- Item Event -->
+    <string name="card_image">Gambar Event</string>
+    <string name="card_title">Nama Event</string>
+    <string name="card_description">Deskripsi Event</string>
+
+    <!-- Detail Event -->
+    <string name="name">Event Name</string>
+    <string name="title_owner">Diselenggarakan Oleh</string>
+    <string name="owner">Owner Name</string>
+    <string name="title_begin_time">Terbuka Hingga</string>
+    <string name="beginTime">Begin Time</string>
+    <string name="title_quota">Sisa Kuota</string>
+    <string name="quota">Quota</string>
+    <string name="title_description">Deskripsi</string>
+    <string name="description">Event Description</string>
+    <string name="action_button">Register</string>
+
+    <!-- Bottom Navbar -->
+    <string name="title_home">Home</string>
+    <string name="title_upcoming">Upcoming</string>
+    <string name="title_finished">Finished</string>
+</resources>
