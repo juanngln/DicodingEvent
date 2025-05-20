@@ -45,14 +45,18 @@ class HomeFragment : Fragment() {
             setUpcomingEventsData(listEvent)
         }
 
+        homeViewModel.isLoadingUpcoming.observe(viewLifecycleOwner) {
+            showLoadingUpcoming(it)
+        }
+
         homeViewModel.loadEvents("0")
 
         homeViewModel.listFinishedEvent.observe(viewLifecycleOwner) { listEvent ->
             setFinishedEventsData(listEvent)
         }
 
-        homeViewModel.isLoading.observe(viewLifecycleOwner) {
-            showLoading(it)
+        homeViewModel.isLoadingFinished.observe(viewLifecycleOwner) {
+            showLoadingFinished(it)
         }
     }
 
@@ -68,11 +72,19 @@ class HomeFragment : Fragment() {
         binding.rvEventFinished.adapter = adapter
     }
 
-    private fun showLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progressBar.visibility = View.VISIBLE
+    private fun showLoadingUpcoming(isLoadingUpcoming: Boolean) {
+        if (isLoadingUpcoming) {
+            binding.upcomingProgressBar.visibility = View.VISIBLE
         } else {
-            binding.progressBar.visibility = View.GONE
+            binding.upcomingProgressBar.visibility = View.GONE
+        }
+    }
+
+    private fun showLoadingFinished(isLoadingFinished: Boolean) {
+        if (isLoadingFinished) {
+            binding.finishedProgressBar.visibility = View.VISIBLE
+        } else {
+            binding.finishedProgressBar.visibility = View.GONE
         }
     }
 

@@ -20,15 +20,22 @@ class HomeViewModel : ViewModel() {
     private val _listFinishedEvent = MutableLiveData<List<ListEventsItem>>()
     val listFinishedEvent: LiveData<List<ListEventsItem>> = _listFinishedEvent
 
-    private val _isLoading = MutableLiveData<Boolean>()
-    val isLoading: LiveData<Boolean> = _isLoading
+    private val _isLoadingUpcoming = MutableLiveData<Boolean>()
+    val isLoadingUpcoming: LiveData<Boolean> = _isLoadingUpcoming
+
+    private val _isLoadingFinished = MutableLiveData<Boolean>()
+    val isLoadingFinished: LiveData<Boolean> = _isLoadingFinished
 
     companion object{
         private const val TAG = "HomeViewModel"
     }
 
     fun loadEvents(isActive: String) {
-        _isLoading.value = true
+        if (isActive == "1") {
+            _isLoadingUpcoming.value = true
+        } else {
+            _isLoadingFinished.value = true
+        }
         val client = ApiConfig.getApiService().getEvents(isActive = isActive)
         client.enqueue(object : Callback<EventResponse> {
             @RequiresApi(Build.VERSION_CODES.O)
@@ -36,7 +43,11 @@ class HomeViewModel : ViewModel() {
                 call: Call<EventResponse>,
                 response: Response<EventResponse>
             ) {
-                _isLoading.value = false
+                if (isActive == "1") {
+                    _isLoadingUpcoming.value = false
+                } else {
+                    _isLoadingFinished.value = false
+                }
                 if (response.isSuccessful) {
                     val events = response.body()?.listEvents ?: emptyList()
                     if (isActive == "1") {
@@ -50,7 +61,11 @@ class HomeViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<EventResponse>, t: Throwable) {
-                _isLoading.value = false
+                if (isActive == "1") {
+                    _isLoadingUpcoming.value = false
+                } else {
+                    _isLoadingFinished.value = false
+                }
                 Log.e(TAG, "onFailure: ${t.message}")
             }
         })
