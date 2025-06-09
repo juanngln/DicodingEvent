@@ -1,4 +1,4 @@
-package com.idcamp.dicodingevent.ui
+package com.idcamp.dicodingevent.ui.main
 
 import android.os.Build
 import android.util.Log

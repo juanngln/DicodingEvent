@@ -1,4 +1,4 @@
-package com.idcamp.dicodingevent.ui
+package com.idcamp.dicodingevent.ui.main
 
 import android.os.Bundle
 import android.view.View
@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.idcamp.dicodingevent.data.response.ListEventsItem
 import com.idcamp.dicodingevent.databinding.ActivityMainBinding
+import com.idcamp.dicodingevent.ui.EventAdapter
 
 class MainActivity : AppCompatActivity() {
 

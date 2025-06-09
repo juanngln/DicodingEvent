@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.idcamp.dicodingevent.data.response.ListEventsItem
 import com.idcamp.dicodingevent.databinding.FragmentUpcomingBinding
 import com.idcamp.dicodingevent.ui.EventAdapter
-import com.idcamp.dicodingevent.ui.MainViewModel
+import com.idcamp.dicodingevent.ui.main.MainViewModel
 
 class UpcomingFragment : Fragment() {
 

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.idcamp.dicodingevent.data.response.ListEventsItem
 import com.idcamp.dicodingevent.databinding.ItemEventBinding
+import com.idcamp.dicodingevent.ui.detail.DetailActivity
 
 class EventAdapter : ListAdapter<ListEventsItem, EventAdapter.MyViewHolder>(DIFF_CALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.idcamp.dicodingevent.data.response.ListEventsItem
 import com.idcamp.dicodingevent.databinding.CardEventBinding
+import com.idcamp.dicodingevent.ui.detail.DetailActivity
 
 class EventHorizontalAdapter : ListAdapter<ListEventsItem, EventHorizontalAdapter.MyViewHolder>(
     DIFF_CALLBACK

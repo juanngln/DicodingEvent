@@ -7,18 +7,24 @@
     <string name="upcoming">Upcoming Events</string>
     <string name="finished">Finished Events</string>
 
-    <!-- Upcoming Event -->
-    <string name="subtitle_upcoming">Recommendation event for you!</string>
+    <!-- Upcoming -->
+    <string name="subtitle_upcoming">Recommendation for you!</string>
 
-    <!-- Finished Event -->
+    <!-- Finished -->
     <string name="subtitle_finished">Finished Event</string>
 
-    <!-- Item Event -->
+    <!-- Favorite -->
+    <string name="subtitle_favorite">Your favorite event</string>
+
+    <!-- Setting -->
+    <string name="subtitle_setting">Settings</string>
+
+    <!-- Item -->
     <string name="card_image">Gambar Event</string>
     <string name="card_title">Nama Event</string>
     <string name="card_description">Deskripsi Event</string>
 
-    <!-- Detail Event -->
+    <!-- Detail -->
     <string name="name">Event Name</string>
     <string name="title_owner">Diselenggarakan Oleh</string>
     <string name="owner">Owner Name</string>
@@ -29,9 +35,12 @@
     <string name="title_description">Deskripsi</string>
     <string name="description">Event Description</string>
     <string name="action_button">Register</string>
+    <string name="fab_favorite">Favorite</string>
 
     <!-- Bottom Navbar -->
     <string name="title_home">Home</string>
     <string name="title_upcoming">Upcoming</string>
     <string name="title_finished">Finished</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_setting">Setting</string>
 </resources>
