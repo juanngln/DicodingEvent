@@ -189,7 +189,7 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="36dp"
         android:paddingVertical="10dp"
-        android:background="@color/white"
+        android:background="?attr/colorSurface"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -199,7 +199,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/action_button"
-            android:textColor="@color/white" />
+            android:text="@string/action_button" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

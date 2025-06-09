@@ -1,4 +1,4 @@
-package com.idcamp.dicodingevent.ui
+package com.idcamp.dicodingevent.ui.favorite
 
 import android.app.Application
 import androidx.lifecycle.LiveData

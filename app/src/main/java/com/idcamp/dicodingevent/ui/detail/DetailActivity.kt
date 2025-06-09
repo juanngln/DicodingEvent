@@ -12,8 +12,8 @@ import com.idcamp.dicodingevent.R
 import com.idcamp.dicodingevent.data.response.EventDetailItem
 import com.idcamp.dicodingevent.database.FavoriteEvent
 import com.idcamp.dicodingevent.databinding.ActivityDetailBinding
-import com.idcamp.dicodingevent.ui.FavoriteAddDeleteViewModel
-import com.idcamp.dicodingevent.ui.ViewModelFactory
+import com.idcamp.dicodingevent.ui.favorite.FavoriteAddDeleteViewModel
+import com.idcamp.dicodingevent.ui.FavoriteViewModelFactory
 import kotlin.properties.Delegates
 
 class DetailActivity : AppCompatActivity() {
@@ -48,7 +48,7 @@ class DetailActivity : AppCompatActivity() {
 
         favoriteAddDeleteViewModel = ViewModelProvider(
             this,
-            ViewModelFactory.getInstance(application)
+            FavoriteViewModelFactory.getInstance(application)
         )[FavoriteAddDeleteViewModel::class.java]
 
         id = eventId.toInt()

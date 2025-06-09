@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.idcamp.dicodingevent.data.response.ListEventsItem
 import com.idcamp.dicodingevent.databinding.FragmentFavoriteBinding
 import com.idcamp.dicodingevent.ui.EventAdapter
-import com.idcamp.dicodingevent.ui.ViewModelFactory
+import com.idcamp.dicodingevent.ui.FavoriteViewModelFactory
 
 class FavoriteFragment : Fragment() {
 
@@ -33,7 +33,7 @@ class FavoriteFragment : Fragment() {
 
         favoriteViewModel = ViewModelProvider(
             this,
-            ViewModelFactory.getInstance(requireActivity().application)
+            FavoriteViewModelFactory.getInstance(requireActivity().application)
         )[FavoriteViewModel::class.java]
 
         val layoutManager = LinearLayoutManager(requireContext())
