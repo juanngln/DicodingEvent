@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.idcamp.dicodingevent.databinding.FragmentSettingBinding
-import com.idcamp.dicodingevent.ui.SettingViewModelFactory
 
 class SettingFragment : Fragment() {
 

@@ -1,10 +1,8 @@
-package com.idcamp.dicodingevent.ui
+package com.idcamp.dicodingevent.ui.favorite
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.idcamp.dicodingevent.ui.favorite.FavoriteAddDeleteViewModel
-import com.idcamp.dicodingevent.ui.favorite.FavoriteViewModel
 
 class FavoriteViewModelFactory private constructor(
     private val application: Application

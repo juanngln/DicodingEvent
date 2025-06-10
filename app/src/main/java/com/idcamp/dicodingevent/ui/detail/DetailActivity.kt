@@ -13,7 +13,7 @@ import com.idcamp.dicodingevent.data.response.EventDetailItem
 import com.idcamp.dicodingevent.database.FavoriteEvent
 import com.idcamp.dicodingevent.databinding.ActivityDetailBinding
 import com.idcamp.dicodingevent.ui.favorite.FavoriteAddDeleteViewModel
-import com.idcamp.dicodingevent.ui.FavoriteViewModelFactory
+import com.idcamp.dicodingevent.ui.favorite.FavoriteViewModelFactory
 import kotlin.properties.Delegates
 
 class DetailActivity : AppCompatActivity() {

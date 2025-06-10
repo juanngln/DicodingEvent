@@ -1,9 +1,7 @@
-package com.idcamp.dicodingevent.ui
+package com.idcamp.dicodingevent.ui.setting
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.idcamp.dicodingevent.ui.setting.SettingPreferences
-import com.idcamp.dicodingevent.ui.setting.SettingViewModel
 
 class SettingViewModelFactory(private val pref: SettingPreferences) : ViewModelProvider.NewInstanceFactory() {
 

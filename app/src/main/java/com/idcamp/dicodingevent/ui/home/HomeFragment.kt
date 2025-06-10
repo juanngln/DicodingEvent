@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +12,10 @@ import com.idcamp.dicodingevent.data.response.ListEventsItem
 import com.idcamp.dicodingevent.databinding.FragmentHomeBinding
 import com.idcamp.dicodingevent.ui.EventAdapter
 import com.idcamp.dicodingevent.ui.EventHorizontalAdapter
+import com.idcamp.dicodingevent.ui.setting.SettingPreferences
+import com.idcamp.dicodingevent.ui.setting.SettingViewModel
+import com.idcamp.dicodingevent.ui.setting.SettingViewModelFactory
+import com.idcamp.dicodingevent.ui.setting.dataStore
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -57,6 +62,21 @@ class HomeFragment : Fragment() {
 
         homeViewModel.isLoadingFinished.observe(viewLifecycleOwner) {
             showLoadingFinished(it)
+        }
+
+        val pref = SettingPreferences.getInstance(requireContext().dataStore)
+
+        val settingViewModel = ViewModelProvider(
+            this,
+            SettingViewModelFactory(pref)
+        )[SettingViewModel::class.java]
+
+        settingViewModel.getThemeSettings().observe(viewLifecycleOwner) { isDarkModeActive: Boolean ->
+            if (isDarkModeActive) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
     }
 
